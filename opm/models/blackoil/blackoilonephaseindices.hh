@@ -115,12 +115,12 @@ struct BlackOilOnePhaseIndices
     //////////////////////
 
     //! \brief returns the index of "active" component
-    static unsigned canonicalToActiveComponentIndex(unsigned compIdx)
+    static unsigned canonicalToActiveComponentIndex(unsigned /* compIdx */)
     {
         return 0;
     }
 
-    static unsigned activeToCanonicalComponentIndex(unsigned compIdx)
+    static unsigned activeToCanonicalComponentIndex(unsigned compIdx OPM_UNUSED)
     {
         // assumes canonical oil = 0, water = 1, gas = 2;
         assert(compIdx == 0);
